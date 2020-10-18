@@ -1,0 +1,195 @@
+.footer {
+  background-color: #17305c;
+  padding: 77px 0 0 43px;
+  margin-top: -45px;
+  overflow: hidden;
+  z-index: -3;
+  position: relative;
+
+  .footer-left {
+    .logo {
+      padding-left: 14px;
+    }
+
+    .mess {
+      color: white;
+      font-weight: 400;
+      font-family: "Opensan_regular";
+      font-style: italic;
+      font-size: 14px;
+      padding: 22px 0px 3px;
+    }
+
+    .license {
+      color: white;
+      font-weight: 400;
+      font-family: "Opensan_regular";
+      font-style: italic;
+      padding: 45px 0 25px;
+      font-size: 16px;
+    }
+  }
+
+  .footer-center {
+    padding: 13px 0 0 129px;
+
+    h3 {
+      color: #ffffff;
+      font-weight: 700;
+      font-family: "Opensan-bold";
+      border-bottom: 1px solid white;
+      font-size: 25px;
+      margin-right: 88px;
+    }
+
+    .out-service {
+      padding-top: 28px;
+
+      .service {
+        padding-bottom: 20px;
+
+        a {
+          color: #ffffff;
+          font-weight: 400;
+          font-family: "Opensan-regular";
+        }
+      }
+    }
+  }
+
+  .footer-right {
+    padding: 13px 0 0 53px;
+
+    h3 {
+      color: #ffffff;
+      font-weight: 700;
+      font-family: "Opensan-bold";
+      border-bottom: 1px solid white;
+      font-size: 25px;
+      margin-right: 163px;
+    }
+
+    .out-service {
+      padding-top: 28px;
+
+      .service {
+        padding-bottom: 20px;
+
+        a {
+          color: #ffffff;
+          font-weight: 400;
+          font-family: "Opensan-regular";
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer {
+    .footer-center {
+      padding: 13px 0 0 76px;
+    }
+
+    .footer-right {
+      padding: 13px 0 0 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footer {
+    padding: 72px 0 0 0px;
+
+    .footer-left {
+      text-align: center;
+      padding: 0 100px;
+    }
+
+    .footer-center h3 {
+      margin-right: 168px;
+    }
+
+    .footer-right h3 {
+      margin-right: 245px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    .footer-left {
+      text-align: center;
+      padding: 0 60px;
+
+      .logo {
+        padding: unset;
+      }
+
+      .license {
+        padding: 10px 0 10px;
+        font-size: 16px;
+      }
+    }
+
+    .footer-center {
+      padding: 13px 0 0 28px;
+
+      h3 {
+        margin-right: 82px;
+      }
+    }
+
+    .footer-right h3 {
+      margin-right: 111px;
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .footer {
+    .footer-left {
+      padding: 0 10px;
+
+      .logo {
+        width: 100%;
+      }
+
+      .license {
+        font-size: 14px;
+      }
+    }
+
+    .footer-center {
+      padding: 13px 0 0 20px;
+
+      h3 {
+        margin-right: 165px;
+      }
+
+      .out-service {
+        padding-top: 8px;
+
+        .service {
+          padding-bottom: 8px;
+        }
+      }
+    }
+
+    .footer-right {
+      padding: 13px 0 0 20px;
+
+      h3 {
+        margin-right: 165px;
+      }
+
+      .out-service {
+        padding-top: 8px;
+
+        .service {
+          padding-bottom: 8px;
+        }
+      }
+    }
+  }
+}
