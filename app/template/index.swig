@@ -52,7 +52,7 @@ block bodyClass %}index{% endblock %} {% block content %}
                     <h3>01</h3>
                     <h4>THIẾT KẾ KIẾN TRÚC</h4>
                   </div>
-                  <div class="text text1">
+                  <div class="text text1" id="text11">
                     <p>Scarcely on striking packages by so property in delicate. Up or well must less rent read walk so
                       be. Easy sold at do hour sing spot.</p>
                   </div>
@@ -62,7 +62,7 @@ block bodyClass %}index{% endblock %} {% block content %}
                     <h3>02</h3>
                     <h4>THIẾT KẾ KIẾN TRÚC</h4>
                   </div>
-                  <div class="text text2">
+                  <div class="text text2" id="text22">
                     <p>Scarcely on striking packages by so property in delicate. Up or well must less rent read walk so
                       be. Easy sold at do hour sing spot.</p>
                   </div>
@@ -72,7 +72,7 @@ block bodyClass %}index{% endblock %} {% block content %}
                     <h3>03</h3>
                     <h4>THIẾT KẾ KIẾN TRÚC</h4>
                   </div>
-                  <div class="text text3">
+                  <div class="text text3" id="text33">
                     <p>Scarcely on striking packages by so property in delicate. Up or well must less rent read walk so
                       be. Easy sold at do hour sing spot.</p>
                   </div>
@@ -82,7 +82,7 @@ block bodyClass %}index{% endblock %} {% block content %}
                     <h3>04</h3>
                     <h4>THIẾT KẾ KIẾN TRÚC</h4>
                   </div>
-                  <div class="text text4">
+                  <div class="text text4" id="text44">
                     <p>Scarcely on striking packages by so property in delicate. Up or well must less rent read walk so
                       be. Easy sold at do hour sing spot.</p>
                   </div>
@@ -165,16 +165,16 @@ block bodyClass %}index{% endblock %} {% block content %}
                 </div>
                 <div class="layer layer-rotate">
                   <div class="layer layer__run layer__item1 item1">
-                    <img src="../../dist/images/images/field-img/layer1.gif" />
+                    <img class="img1" onmouseover="on_hover('img1', 'text11')" src="../../dist/images/images/field-img/layer1.gif" />
                   </div>
                   <div class="layer layer__run layer__item2 item2">
-                    <img src="../../dist/images/images/field-img/layer2.gif" />
+                    <img class="img2" onmouseover="on_hover('img2', 'text22')" src="../../dist/images/images/field-img/layer2.gif" />
                   </div>
                   <div class="layer layer__run layer__item3 item3">
-                    <img src="../../dist/images/images/field-img/layer3.gif" />
+                    <img class="img3" onmouseover="on_hover('img3', 'text33')" src="../../dist/images/images/field-img/layer3.gif" />
                   </div>
                   <div class="layer layer__run layer__item4 item4">
-                    <img src="../../dist/images/images/field-img/layer4.gif" />
+                    <img class="img4" onmouseover="on_hover('img4', 'text44')" src="../../dist/images/images/field-img/layer4.gif" />
                   </div>
                 </div>
               </div>
@@ -531,6 +531,9 @@ block bodyClass %}index{% endblock %} {% block content %}
     </div>
   </section>
 
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
       $('.slicks').slick({
@@ -639,11 +642,17 @@ block bodyClass %}index{% endblock %} {% block content %}
       document.getElementById(Name).style.display = "block";
       evt.currentTarget.className += " active";
     }
-  
-  function connect(myid) {
-    var text = document.getElementsByClassName("text");
-    var lr1 = document.getElementsByClassName("layer__item1");
-  }
+
+
+    function on_hover(a, b) {
+      jQuery(document).ready(function () {
+        jQuery('.a').hover(function () {
+          jQuery('#b').addClass('active');
+        }, function () {
+          jQuery('#b').removeClass('active');
+        });
+      });
+    }
   </script>
 </main>
 {% endblock %} {% block script %} {% endblock %}
