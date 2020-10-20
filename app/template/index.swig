@@ -164,17 +164,17 @@ block bodyClass %}index{% endblock %} {% block content %}
                   <img src="../../dist/images/images/field-img/line4.gif" />
                 </div>
                 <div class="layer layer-rotate">
-                  <div class="layer layer__run layer__item1 item1">
-                    <img class="img1" onmouseover="on_hover('img1', 'text11')" src="../../dist/images/images/field-img/layer1.gif" />
+                  <div class="layer layer__run layer__item1 item1" onmouseover="on_hover('layer__item1', 'text11')">
+                    <img class="img1" src="../../dist/images/images/field-img/layer1.gif" />
                   </div>
-                  <div class="layer layer__run layer__item2 item2">
-                    <img class="img2" onmouseover="on_hover('img2', 'text22')" src="../../dist/images/images/field-img/layer2.gif" />
+                  <div class="layer layer__run layer__item2 item2"  onmouseover="on_hover('layer__item2', 'text22')">
+                    <img class="img2" src="../../dist/images/images/field-img/layer2.gif" />
                   </div>
-                  <div class="layer layer__run layer__item3 item3">
-                    <img class="img3" onmouseover="on_hover('img3', 'text33')" src="../../dist/images/images/field-img/layer3.gif" />
+                  <div class="layer layer__run layer__item3 item3"  onmouseover="on_hover('layer__item3', 'text33')">
+                    <img class="img3" src="../../dist/images/images/field-img/layer3.gif" />
                   </div>
-                  <div class="layer layer__run layer__item4 item4">
-                    <img class="img4" onmouseover="on_hover('img4', 'text44')" src="../../dist/images/images/field-img/layer4.gif" />
+                  <div class="layer layer__run layer__item4 item4"  onmouseover="on_hover('layer__item4', 'text44')">
+                    <img class="img4" src="../../dist/images/images/field-img/layer4.gif" />
                   </div>
                 </div>
               </div>
@@ -532,8 +532,8 @@ block bodyClass %}index{% endblock %} {% block content %}
   </section>
 
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
   <script type="text/javascript">
     $(document).ready(function () {
       $('.slicks').slick({
@@ -646,7 +646,7 @@ block bodyClass %}index{% endblock %} {% block content %}
 
     function on_hover(a, b) {
       jQuery(document).ready(function () {
-        jQuery('.a').hover(function () {
+        jQuery('.a').mouseenter(function () {
           jQuery('#b').addClass('active');
         }, function () {
           jQuery('#b').removeClass('active');
