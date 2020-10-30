@@ -52,7 +52,7 @@ block bodyClass %}index{% endblock %} {% block content %}
                     <h3>01</h3>
                     <h4>THIẾT KẾ KIẾN TRÚC</h4>
                   </div>
-                  <div class="text text1" id="text11">
+                  <div class="text" id="text11">
                     <p>Scarcely on striking packages by so property in delicate. Up or well must less rent read walk so
                       be. Easy sold at do hour sing spot.</p>
                   </div>
@@ -62,7 +62,7 @@ block bodyClass %}index{% endblock %} {% block content %}
                     <h3>02</h3>
                     <h4>THIẾT KẾ KIẾN TRÚC</h4>
                   </div>
-                  <div class="text text2" id="text22">
+                  <div class="text" id="text22">
                     <p>Scarcely on striking packages by so property in delicate. Up or well must less rent read walk so
                       be. Easy sold at do hour sing spot.</p>
                   </div>
@@ -72,7 +72,7 @@ block bodyClass %}index{% endblock %} {% block content %}
                     <h3>03</h3>
                     <h4>THIẾT KẾ KIẾN TRÚC</h4>
                   </div>
-                  <div class="text text3" id="text33">
+                  <div class="text" id="text33">
                     <p>Scarcely on striking packages by so property in delicate. Up or well must less rent read walk so
                       be. Easy sold at do hour sing spot.</p>
                   </div>
@@ -82,7 +82,7 @@ block bodyClass %}index{% endblock %} {% block content %}
                     <h3>04</h3>
                     <h4>THIẾT KẾ KIẾN TRÚC</h4>
                   </div>
-                  <div class="text text4" id="text44">
+                  <div class="text" id="text44">
                     <p>Scarcely on striking packages by so property in delicate. Up or well must less rent read walk so
                       be. Easy sold at do hour sing spot.</p>
                   </div>
@@ -641,7 +641,6 @@ block bodyClass %}index{% endblock %} {% block content %}
       evt.currentTarget.className += " active";
     }
 
-
     function on_hover(a, b) {
       $(`.${a}`).mouseenter(function () {
         $(`#${b}`).addClass('actives');
@@ -650,6 +649,28 @@ block bodyClass %}index{% endblock %} {% block content %}
         $(`#${b}`).removeClass('actives');
       });
     }
+
+
+    var arr = ["text11", "text22", "text33", "text44"];
+
+    function loopMenu() {
+      // console.log("====================");
+      for (let item = 0; item < arr.length; item++) {
+        const chi = $(`#${arr[item]}`)
+        // console.log(chi);
+        setTimeout(function () {
+          chi.addClass("actives");
+          setTimeout(function () {
+            chi.removeClass("actives");
+          }, 3000)
+        }, 3750 * (item + 1))
+      }
+    }
+    loopMenu();
+
+    setInterval(function () {
+      loopMenu();
+    }, 15000)
   </script>
 </main>
 {% endblock %} {% block script %} {% endblock %}
